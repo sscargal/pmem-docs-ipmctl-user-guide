@@ -6,7 +6,7 @@ Shows performance metrics for one or more persistent memory modules.
 ipmctl show [OPTIONS] -performance [METRICS] [TARGETS]
 ```
 
-### **Metrics** 
+## **Metrics**
 
 Shows output of a specific performance metric by supplying the metric name. See RETURN DATA for more information. One of:
 
@@ -21,11 +21,11 @@ Shows output of a specific performance metric by supplying the metric name. See 
 
 The default is to display all performance metrics.
 
-### **Targets**
+## **Targets**
 
 * `dimm (DimmIDs)`: Show the performance metrics of specific modules by supplying one or more comma-separated DimmIDs. The default is to display sensors for all manageable modules.
 
-### **Examples**
+## **Examples**
 
 Show all performance metrics for all modules in the server
 

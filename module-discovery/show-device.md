@@ -6,13 +6,13 @@ Shows information about one or more Intel Optane DC memory modules.
 ipmctl show [OPTIONS] -dimm [TARGETS]
 ```
 
-### **Targets**
+## **Targets**
 
 * `-dimm (DimmIDs)`: Restricts output to specific modules by supplying the DIMM target and one or more comma-separated DimmIDs. The default is to display all DCPMMs.
 * `-socket (SocketIDs)`: Restricts output to the  modules installed on specific sockets by supplying the socket target and one or more comma-separated socket identifiers. The default is to display all sockets.
   * If ACPI PMTT table is not present, then DDR4 memory will not be displayed in the filtered socket list.
 
-### **Examples** 
+## **Examples**
 
 List a few key fields for each persistent memory module.
 
@@ -51,7 +51,7 @@ $ ipmctl show -d HealthState,LockState -dimm 0x0001
    HealthState=Healthy
 ```
 
-### **Return Data**
+## **Return Data**
 
 * `HealthState` Overall module health. One of:
   * Healthy

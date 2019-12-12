@@ -6,7 +6,7 @@ Shows health statistics for one or more persistent memory modules.
 $ ipmctl show [OPTOINS] -sensor [SENSORS] [TARGETS]
 ```
 
-### **Sensors**
+## **Sensors**
 
 * `Health`: The current module health as reported in the SMART log
 * `MediaTemperature`: The current module media temperature in Celsius
@@ -19,11 +19,11 @@ $ ipmctl show [OPTOINS] -sensor [SENSORS] [TARGETS]
 * `PowerCycles`: The number of power cycles over the lifetime of the module
 * `FwErrorCount`: The total number of firmware error log entries
 
-### **Targets**
+## **Targets**
 
 * `dimm (DimmIDs)`: Show only the sensors on specific modules by supplying the DIMM target and one or more comma-separated DimmIDs. The default is to display sensors for all manageable modules.
 
-### **Examples** 
+## **Examples**
 
 Get all sensor information for all modules
 
@@ -37,7 +37,7 @@ Show the media temperature sensor for the specified module
 $ ipmctl show -sensor MediaTemperature -dimm 0x0011
 ```
 
-### **Return Data**
+## **Return Data**
 
 * `DimmID`: The persistent memory module identifier
 * `Type`: The sensor type. Refer to the Sensors list above

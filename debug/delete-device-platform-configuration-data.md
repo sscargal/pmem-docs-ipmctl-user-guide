@@ -8,12 +8,12 @@ When `Config` is specified, the `Current`, `Input Data Size`, `Output Data Size`
 $ ipmctl delete [OPTIONS] -dimm (DimmIds) -pcd (Config)
 ```
 
-### **Targets**
+## **Targets**
 
 * `-dimm (DimmIDs)`: Deletes the PCD data on specific persistent memory modules by supplying the DIMM target and one or more comma-separated DimmIDs. The default is to delete the PCD data for all manageable modules.
 * `-pcd Config`: Clears the configuration management information
 
-### **Examples** 
+## **Examples**
 
 Clear the Cin, Cout, Ccur tables from all manageable modules
 
@@ -21,7 +21,7 @@ Clear the Cin, Cout, Ccur tables from all manageable modules
 $ delete -dimm -pcd Config
 ```
 
-### **Limitations** 
+## **Limitations**
 
 The specified module\(s\) must be manageable by the host software, and if data-at-rest security is enabled, the modules must be unlocked. Any existing namespaces associated with the requested module\(s\) should be deleted before running this command.
 

@@ -6,11 +6,11 @@ Changes the data-at-rest security lock state for the persistent memory on one or
 $ ipmctl set [OPTIONS] -dimm [TARGETS] Lockstate=(Unlocked|Disabled|Frozen) Passphrase=(string)
 ```
 
-### **Targets**
+## **Targets**
 
 * `-dimm (DimmIDs)`: Changes the lock state of a specific module by supplying one or more comma separated DimmIDs. However, this is not recommended as it may put the system in an undesirable state. The default is to modify all manageable DCPMMs.
 
-### **Properties**
+## **Properties**
 
 * `LockState`: The desired lockstate
   * `Disabled`: Removes the passphrase on a module to disable security. Permitted only when LockState is Unlocked.
@@ -18,7 +18,7 @@ $ ipmctl set [OPTIONS] -dimm [TARGETS] Lockstate=(Unlocked|Disabled|Frozen) Pass
   * `Frozen`: Prevents further lock state changes to the module until the next reboot.
 * `Passphrase`: The current passphrase \(1-32 characters\).
 
-### **Examples** 
+## **Examples**
 
 Unlock device 0x0001
 
@@ -39,7 +39,7 @@ In the previous example, the file would be:
 Passphrase=myPassphrase
 ```
 
-### **Limitations** 
+## **Limitations**
 
 To successfully execute this command:
 

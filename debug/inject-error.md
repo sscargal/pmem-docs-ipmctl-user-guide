@@ -6,11 +6,11 @@ Injects an error or clears a previously injected error on one or more persistent
 ipmctl set [OPTIONS] -dimm (DimmIDs) [PROPERTIES]
 ```
 
-### **Targets**
+## **Targets**
 
 * `-dimm (DimmIDs)`: Injects or clears an error on a specified module by supplying the DIMM target and one or more comma-separated DimmIDs. The default is to inject the error on all manageable modules.
 
-### **Properties** 
+## **Properties**
 
 This command supports setting or clearing one type of error at a time
 
@@ -45,7 +45,7 @@ This command supports setting or clearing one type of error at a time
 
 * `DirtyShutdown=1`: Injects an ADR failure, which will result in a dirty shutdown upon reboot.
 
-### **Examples** 
+## **Examples**
 
 Set the media temperature on all manageable modules to 100 degrees Celsius.
 

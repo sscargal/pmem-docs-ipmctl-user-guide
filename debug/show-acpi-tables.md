@@ -6,7 +6,7 @@ Shows the system ACPI tables related to persistent memory modules.
 $ ipmctl show [OPTIONS] -system (NFIT|PCAT|PMTT)
 ```
 
-### **Targets**
+## **Targets**
 
 * `system (NFIT|PCAT|PMTT)`: The system ACPI table\(s\) to display. By default both the NFIT and PCAT tables are displayed. One of:
   * "NFIT": The NVDIMM Firmware Interface Table
@@ -15,7 +15,7 @@ $ ipmctl show [OPTIONS] -system (NFIT|PCAT|PMTT)
 
     Refer to the ACPI specification for detailed information about the ACPI tables.
 
-### **Examples** 
+## **Examples**
 
 Show the ACPI NFIT
 
@@ -23,7 +23,7 @@ Show the ACPI NFIT
 $ ipmctl show -system NFIT
 ```
 
-### **Return Data** 
+## **Return Data**
 
 Returns the formatted data from the requested ACPI tables and their sub-tables. Refer to the ACPI specification for detailed information about the format of the ACPI tables.
 

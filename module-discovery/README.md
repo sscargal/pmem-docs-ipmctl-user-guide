@@ -25,7 +25,7 @@ The `-dimm` option accepts a single DimmUID or a comma separated list of DimmUID
      DimmUID=8089-a2-1748-00000002
 ```
 
-#### DimmHandle
+## DimmHandle
 
 The `DimmHandle` is equivalent to the `DimmUID` and is formatted as 0xABCD, where A, B, C, and D are defined as follows:
 
@@ -34,7 +34,7 @@ The `DimmHandle` is equivalent to the `DimmUID` and is formatted as 0xABCD, wher
 * C = Channel
 * D = Slot
 
-#### DimmUID
+## DimmUID
 
 The `DimmUID` is a unique identifier specific to each physical module. The unique identifier of an Intel Optane DC persistent memory module is formatted as VVVV-ML-MMYYSNSNSNSN or VVVV-SNSNSNSN \(if the manufacturing information is not available\) where:
 

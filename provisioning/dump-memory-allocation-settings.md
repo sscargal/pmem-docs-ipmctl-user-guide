@@ -6,13 +6,13 @@ Store the currently configured memory allocation settings for all persistent mem
 $ ipmctl dump [OPTIONS] -destination (path) -system -config
 ```
 
-### **Example**
+## **Example**
 
 ```text
 $ ipmctl dump -destination config.txt -system -config
 ```
 
-### **Limitations** 
+## **Limitations**
 
 Only memory allocation settings for manageable persistent memory modules that have been successfully applied by the BIOS are stored in the file. Unconfigured modules are not included, nor are memory allocation goals that have not been applied.
 

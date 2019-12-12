@@ -6,11 +6,11 @@ Shows basic information about the physical processors in the host server.
 ipmctl show [OPTIONS] -socket [TARGETS]
 ```
 
-### **Targets**
+## **Targets**
 
 * `-socket (SocketIDs)`: Restricts output to the DIMMs installed on specific sockets by supplying the socket target and one or more comma-separated socket identifiers. The default is to display all sockets.
 
-### **Examples** 
+## **Examples**
 
 Display information about all the processors.
 
@@ -44,7 +44,7 @@ $ ipmctl show -d MappedMemoryLimit -socket
    MappedMemoryLimit=4608.0 GiB
 ```
 
-### **Return Data**
+## **Return Data**
 
 * The `MappedMemoryLimit` is the maximum amount of memory that is allowed to be mapped into the system physical address space for this processor based on its SKU.
 * `TotalMappedMemory` is the total amount of memory that is currently mapped into the system physical address space for this processor.

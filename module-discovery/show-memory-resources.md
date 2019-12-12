@@ -6,7 +6,7 @@ Show the total Intel Optane DC persistent memory resource allocation across the 
 ipmctl show [OPTIONS] -memoryresources
 ```
 
-### **Example**
+## **Example**
 
 Show persistent memory module resource allocation.
 
@@ -21,7 +21,7 @@ InaccessibleCapacity=5.0 GiB
 ReservedCapacity=0.0 GiB
 ```
 
-### **Return Data**
+## **Return Data**
 
 * `MemoryCapacity`: Total usable system persistent memory for Memory Mode.
 * `AppDirectCapacity`: Total usable system persistent memory for App Direct mode.

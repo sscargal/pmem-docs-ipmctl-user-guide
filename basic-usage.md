@@ -1,6 +1,6 @@
 # Basic Usage
 
-The `ipmctl` utility has many options. A complete list of commands can be shown by executing `ipmctl` with no arguments, `ipmctl help`, or reading the `ipmctl(1)` man page. Running `ipmctl`requires root privileges. `ipmctl` can also be used from UEFI. Namespaces are created using `ipmctl` at UEFI level or the [ndctl utility](../getting-started-guide/what-is-ndctl.md).
+The `ipmctl` utility has many options. A complete list of commands can be shown by executing `ipmctl` with no arguments, `ipmctl help`, or reading the `ipmctl(1)` man page. Running `ipmctl`requires root privileges. `ipmctl` can also be used from UEFI. Namespaces are created using `ipmctl` at UEFI level or the [ndctl utility](https://github.com/sscargal/pmem-docs-ipmctl-user-guide/tree/f25a04768fa69975fc7b10ea1818b460255f1b79/getting-started-guide/what-is-ndctl.md).
 
 Usage:
 

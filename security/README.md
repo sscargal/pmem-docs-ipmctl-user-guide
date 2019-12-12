@@ -4,5 +4,5 @@ Intel DC persistent memory modules support data-at-rest security by encrypting t
 
 > NOTE: Security commands are subject to OS Vendor \(OSV\) support and will return "Not Supported." An exception is if the module is in Unlocked Security State, then transitioning to Disabled is permitted.
 
-For further security information, refer to the [Managing NVDIMM Security](../../ndctl-users-guide/managing-nvdimm-security.md) section of the NDCTL user guide.
+For further security information, refer to the [Managing NVDIMM Security](https://github.com/sscargal/pmem-docs-ipmctl-user-guide/tree/f25a04768fa69975fc7b10ea1818b460255f1b79/ndctl-users-guide/managing-nvdimm-security.md) section of the NDCTL user guide.
 

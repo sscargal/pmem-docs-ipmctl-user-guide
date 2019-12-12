@@ -6,13 +6,13 @@ Shows the topology of DDR and persistent memory modules installed in the host se
 ipmctl show [OPTIONS] -topology [TARGETS]
 ```
 
-### **Targets**
+## **Targets**
 
 * `-dimm [(DimmIDs)]`: Restricts output to specific DIMMs by optionally supplying the DIMM target and one or more comma-separated DIMM identifiers. The default is to display all DIMMs.
 * `-socket (SocketIDs)`: Restricts output to the DIMMs installed on specific sockets by supplying the socket target and one or more comma-separated socket identifiers. The default is to display all sockets.
   * If ACPI PMTT table is not present, then DDR4 memory will not be displayed in the filtered socket list.
 
-### **Example**
+## **Example**
 
 ```text
 $ ipmctl show -topology

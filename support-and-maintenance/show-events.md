@@ -6,11 +6,11 @@ Shows persistent memory module related events. The options, targets, and propert
 $ ipmctl show [OPTIONS] -event [TARGETS] [PROPERTIES]
 ```
 
-### **Targets**
+## **Targets**
 
 * `-dimm [(DimmID)]`: Filter output to events on a specific module by optionally supplying the DIMM target and one or more DimmID.
 
-### **Properties**
+## **Properties**
 
 * `Category`: Filters output to events of a specific category. One of:
   * `Diag`: Filters output to diagnostic events.
@@ -30,7 +30,7 @@ $ ipmctl show [OPTIONS] -event [TARGETS] [PROPERTIES]
   * `1`: Filters output to only show ActionRequired events.
 * `Count`: Filters output of events limited to the specified count, starting with the most recent. Count may be a value from 1 to 2,147,483,647. Default = 50.
 
-### **Examples** 
+## **Examples**
 
 Display the 50 most recent events.
 
@@ -44,7 +44,7 @@ Show the 10 most recent error events. With the exception that this call limits t
 $ ipmctl show -event count=10 severity=error
 ```
 
-### **Return Data** 
+## **Return Data**
 
 This command displays a table with a row for each event matching the provided filters, showing most recent first.
 

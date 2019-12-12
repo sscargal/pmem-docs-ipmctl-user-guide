@@ -1,6 +1,6 @@
 # Version and Firmware
 
-### Get Version
+## Get Version
 
 Shows the persistent memory module host software versions
 
@@ -8,7 +8,7 @@ Shows the persistent memory module host software versions
 $ ipmctl version
 ```
 
-### Show Device Firmware
+## Show Device Firmware
 
 Shows detailed information about the firmware on one or more modules
 
@@ -16,7 +16,7 @@ Shows detailed information about the firmware on one or more modules
 $ ipmctl show [OPTIONS] -firmware [TARGETS]
 ```
 
-### Update Firmware 
+## Update Firmware
 
 Updates the firmware on one or more modules
 
@@ -28,7 +28,7 @@ $ ipmctl load [OPTIONS] -source (path) -dimm (DimmIds) [TARGETS]
 >
 > NOTE: A reboot is required to activate the updated firmware image and is recommended to ensure ARS runs to completion.
 
-#### **Examples** 
+### **Examples**
 
 Update the firmware on all modules in the system to the image in sourcefile.pkg on the next power cycle.
 
@@ -43,6 +43,4 @@ $ ipmctl load -examine -source sourcefile.pkg -dimm
 ```
 
 > NOTE: Once a firmware image is staged for execution, a power cycle is required before another firmware image of the same type \(production or debug\) can be staged for execution using this command.
-
-
 

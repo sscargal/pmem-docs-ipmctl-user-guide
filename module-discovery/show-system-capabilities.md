@@ -6,7 +6,7 @@ Shows the platform supported Intel Optane DC persistent memory capabilities acro
 ipmctl show [OPTIONS] -system -capabilities
 ```
 
-### **Example**
+## **Example**
 
 ```text
 $ ipmctl show -system -capabilities
@@ -18,7 +18,7 @@ CurrentVolatileMode=1LM
 AllowedAppDirectMode=App Direct
 ```
 
-### **Return Data**
+## **Return Data**
 
 * `PlatformConfigSupported`: Whether the platform level configuration of persistent memory modules can be modified with the host software. One of:
   * 0: Changes must be made in the BIOS.

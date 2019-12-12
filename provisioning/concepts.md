@@ -12,7 +12,5 @@ Regions can be divided up into one or more **namespaces**. A namespace defines a
 
 ![Namespaces](https://user-images.githubusercontent.com/21182867/59884230-94942a80-936c-11e9-8b66-ab911a240fb0.png)
 
-Namespaces are conceptually similar to a partition, and a **label** is similar to a partition table. Intel persistent memory modules support labels which allow regions to be further divided into namespaces. A label contains metadata stored on an NVDIMM. 
-
-
+Namespaces are conceptually similar to a partition, and a **label** is similar to a partition table. Intel persistent memory modules support labels which allow regions to be further divided into namespaces. A label contains metadata stored on an NVDIMM.
 

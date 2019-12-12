@@ -6,18 +6,18 @@ Enable data-at-rest security for the persistent memory on one or more persistent
 $ ipmctl set [OPTIONS] -dimm [TARGETS] NewPassphrase=(string) ConfirmPassphrase=(string)
 ```
 
-### **Targets**
+## **Targets**
 
 * `-dimm (DimmIDs)`
 
   Set the passphrase on specific modules by supplying one or more comma separated DimmIDs. However, this is not recommended as it may put the system in an undesirable state. The default is to set the passphrase on all manageable modules.
 
-### **Properties**
+## **Properties**
 
 * `NewPassphrase`: The new passphrase \(1-32 characters\).
 * `ConfirmPassphrase`: Confirmation of the new passphrase \(1-32 character and must match NewPassphrase\).
 
-### **Examples**
+## **Examples**
 
 Set a passphrase on DIMM 0x0001
 
@@ -38,7 +38,7 @@ In the previous example, the format of the file would be:
 NewPassphrase=myNewPassphrase
 ```
 
-### **Limitations**
+## **Limitations**
 
 In order to successfully execute this command:
 
