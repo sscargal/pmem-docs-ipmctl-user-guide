@@ -14,7 +14,7 @@ Functionality includes:
 
 * Discover Intel Optane DC memory modules on the platform
 * Provision the platform memory configuration
-  * Learn more about operating modes in this [video](https://github.com/sscargal/pmem-docs-ipmctl-user-guide/tree/f25a04768fa69975fc7b10ea1818b460255f1b79/link/README.md)
+  * Learn more about operating modes in this [video](https://www.youtube.com/watch?v=gqo3gty-R4s)
 * View and update module firmware
 * Configure data-at-rest security
 * Monitor module health

@@ -2,9 +2,11 @@
 
 Load a memory allocation goal from a file onto one or more persistent memory modules.
 
-> **WARNING**: Provisioning or changing modes may result in data loss. Data should be backed up to other storage before executing this command.
->
-> > Changing a memory allocation goal modifies how the platform firmware maps persistent memory in the system address space \(SPA\), which may result in data loss or inaccessible data, but does not explicitly delete or modify user data found in persistent memory.
+{% hint style="warning" %}
+**WARNING:** Provisioning or changing modes may result in data loss. Data should be backed up to other storage before executing this command.
+
+Changing a memory allocation goal modifies how the platform firmware maps persistent memory in the system address space \(SPA\), which may result in data loss or inaccessible data, but does not explicitly delete or modify user data found in persistent memory.
+{% endhint %}
 
 ```text
 $ ipmctl load [OPTIONS] -source (path) -goal [TARGETS]

@@ -4,7 +4,7 @@
 ipmctl create [OPTIONS] -goal [TARGETS] [PROPERTIES]
 ```
 
-The `ipmctl create -goal` command has many options. A complete list of options can be shown by executing `ipmctl create -help`, or reading the `ipmctl(1)` man page. **Once a goal is created, it does not take effect until the system is rebooted.** After a reboot, the BIOS configures the requested goal, and clears the goal.
+The `ipmctl create -goal` command has many options. A complete list of options can be shown by executing `ipmctl create -help`, or reading the `ipmctl(1)` man page. Once a goal is created, it does not take effect until the system is rebooted. After a reboot, the BIOS configures the requested goal, and clears the goal.
 
 ## **Targets**
 

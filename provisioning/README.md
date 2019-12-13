@@ -8,7 +8,9 @@ Intel Optane DC persistent memory modules can be provisioned into three differen
 
 You can learn more about each operating mode and which is right for your application in this [video](https://www.youtube.com/watch?v=gqo3gty-R4s).
 
-> **WARNING**: Provisioning or changing modes may result in data loss. Data should be backed up to other storage before executing this command.
->
-> > Changing a memory allocation goal modifies how the platform firmware maps persistent memory in the system address space \(SPA\) which may result in data loss or inaccessible data, but does not explicitly delete or modify user data found in persistent memory.
+{% hint style="warning" %}
+**WARNING:** Provisioning or changing modes may result in data loss. Data should be backed up to other storage before executing this command.
+
+Changing a memory allocation goal modifies how the platform firmware maps persistent memory in the system address space which may result in data loss or inaccessible data, but does not explicitly delete or modify user data found in persistent memory.
+{% endhint %}
 
