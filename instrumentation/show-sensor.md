@@ -3,7 +3,7 @@
 Shows health statistics for one or more persistent memory modules.
 
 ```text
-$ ipmctl show [OPTOINS] -sensor [SENSORS] [TARGETS]
+$ ipmctl show [OPTIONS] -sensor [SENSORS] [TARGETS]
 ```
 
 ## **Sensors**
