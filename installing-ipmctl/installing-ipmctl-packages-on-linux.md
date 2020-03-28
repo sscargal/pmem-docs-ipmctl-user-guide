@@ -4,13 +4,75 @@ The `ipmctl` utility is available in many Linux distribution package repositorie
 
 {% tabs %}
 {% tab title="Fedora" %}
+The ipmctl package for v02.00.00.xxxx or later is available in the default package repository on Fedora.
 
+Step 1\) Query the package repository to confirm that ipmctl is available:
+
+```text
+dnf search ipmctl
+dnf info ipmctl
+```
+
+Example:
+
+```text
+$ dnf search ipmctl
+Last metadata expiration check: 1:24:31 ago on Fri 27 Mar 2020 06:27:17 PM MDT.
+================================================== Name Exactly Matched: ipmctl ==================================================
+ipmctl.x86_64 : Utility for managing Intel Optane DC persistent memory modules
+================================================= Name & Summary Matched: ipmctl =================================================
+libipmctl-devel.x86_64 : Development packages for libipmctl
+ipmctl-debugsource.x86_64 : Debug sources for package ipmctl
+ipmctl-debuginfo.x86_64 : Debug information for package ipmctl
+libipmctl-debuginfo.x86_64 : Debug information for package libipmctl
+ipmctl-monitor-debuginfo.x86_64 : Debug information for package ipmctl-monitor
+====================================================== Name Matched: ipmctl ======================================================
+libipmctl.x86_64 : Library for Intel DCPMM management
+ipmctl-monitor.x86_64 : Daemon for monitoring the status of Intel DCPMM
+
+$  dnf info ipmctl
+Last metadata expiration check: 1:25:19 ago on Fri 27 Mar 2020 06:27:17 PM MDT.
+Installed Packages
+Name         : ipmctl
+Version      : 02.00.00.3446
+Release      : 1.el7
+Architecture : x86_64
+Size         : 65 k
+Source       : ipmctl-02.00.00.3446-1.el7.src.rpm
+Repository   : @System
+From repo    : jhli-ipmctl
+Summary      : Utility for managing Intel Optane DC persistent memory modules
+URL          : https://github.com/intel/ipmctl
+License      : BSD
+Description  : Utility for managing Intel Optane DC persistent memory modules
+             : Supports functionality to:
+             : Discover DCPMMs on the platform.
+             : Provision the platform memory configuration.
+             : View and update the firmware on DCPMMs.
+             : Configure data-at-rest security on DCPMMs.
+             : Monitor DCPMM health.
+             : Track performance of DCPMMs.
+             : Debug and troubleshoot DCPMMs.
+
+```
+
+Step 2\) Install the ipmctl package:
+
+```text
+sudo dnf install ipmctl
+```
+
+Step 3\) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
+
+```text
+$ sudo ipmctl help
+```
 {% endtab %}
 
 {% tab title="RHEL & CentOS" %}
 The ipmctl package is available on CentOS, RHEL, and RHEL for SAP HANA v7.5 or later in the EPEL repository \(Extra Packages for Enterprise Linux\).
 
-1\) Verify the EPEL repository is active:
+Step 1\) Verify the EPEL repository is active:
 
 ```text
 $ yum repolist
@@ -30,10 +92,10 @@ If the EPEL repository is not listed, install and activate it using:
 $ sudo yum install epel-release
 ```
 
-2\) Query the package repository to confirm that ipmctl is available:
+Step 2\) Query the package repository to confirm that ipmctl is available:
 
 ```text
-sudo yum search ipmctl
+sudo yum info ipmctl
 ```
 
 Example:
@@ -62,13 +124,13 @@ Description : Utility for managing Intel Optane DC persistent memory modules
             : Debug and troubleshoot DCPMMs.
 ```
 
-3\) Install the ipmctl package:
+Step 3\) Install the ipmctl package:
 
 ```text
 sudo yum install ipmctl
 ```
 
-4\) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
+Step 4\) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
 
 ```text
 $ sudo ipmctl help
@@ -81,7 +143,7 @@ The ipmctl package is available in the default package repository on SUSE, OpenS
 Step 1\) Query the package repository to confirm that ipmctl is available:
 
 ```text
-sudo zypper search ipmctl
+sudo zypper info ipmctl
 ```
 
 Example:
