@@ -4,7 +4,7 @@ Building ipmctl from source code if your Linux package repository does not provi
 
 {% tabs %}
 {% tab title="Fedora" %}
-This procedure provides the steps for building and installing ipmctl on Fedora 30 or later.
+This procedure provides the steps for building and installing ipmctl on Fedora.
 
 ### Prerequisites
 
