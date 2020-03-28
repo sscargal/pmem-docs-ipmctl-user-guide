@@ -2,7 +2,7 @@
 
 ## Introduction
 
-`ipmctl` is an open source utility created and maintained by Intel to manage Intel® Optane™ DC persistent memory modules. `ipmctl`, which works in both Linux and Windows, is a vendor specific tool, meaning it is not able to be used for managing persistent memory or NVMIMM's from vendors other than Intel. The full project is open source and can be seen on [GitHub](https://github.com/intel/ipmctl). In this guide we will refer to Intel® Optane™ DC memory modules simply as _modules_ or the _persistent memory modules_.
+`ipmctl` is an open source utility created and maintained by Intel to manage Intel® Optane™ persistent memory modules. `ipmctl`, works on both Linux and Windows. The full project is open source and can be seen on [GitHub](https://github.com/intel/ipmctl). In this guide we will refer to Intel® Optane™ memory modules simply as _modules_ or _persistent memory modules_.
 
 `ipmctl` refers to the following interface components:
 
@@ -12,7 +12,7 @@
 
 Functionality includes:
 
-* Discover Intel Optane DC memory modules on the platform
+* Discover Intel Optane persistent memory modules on the platform
 * Provision the platform memory configuration
   * Learn more about operating modes in this [video](https://www.youtube.com/watch?v=gqo3gty-R4s)
 * View and update module firmware

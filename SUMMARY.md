@@ -1,7 +1,11 @@
 # Table of contents
 
 * [IPMCTL User Guide](README.md)
-* [Installing IPMCTL](installing-ipmctl.md)
+* [Installing IPMCTL](installing-ipmctl/README.md)
+  * [Installing IPMCTL packages on Linux](installing-ipmctl/installing-ipmctl-packages-on-linux.md)
+  * [Building and Installing IPMCTL from Source on Linux](installing-ipmctl/building-and-installing-ipmctl-from-source-on-linux.md)
+  * [Installing IPMCTL on Microsoft Windows using the MSI Installer](installing-ipmctl/installing-ipmctl-on-microsoft-windows-using-the-msi-installer.md)
+  * [Building and Installing IPMCTL on Microsoft Windows from Source](installing-ipmctl/building-and-installing-ipmctl-on-microsoft-windows-from-source.md)
 * [Basic Usage](basic-usage.md)
 * [Module Discovery](module-discovery/README.md)
   * [Show System Capabilities](module-discovery/show-system-capabilities.md)
