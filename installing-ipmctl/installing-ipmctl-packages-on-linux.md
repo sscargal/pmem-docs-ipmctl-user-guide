@@ -190,7 +190,73 @@ $ sudo ipmctl help
 {% endtab %}
 
 {% tab title="Ubuntu" %}
+The ipmctl package for v02.00.00.xxxx or later is available in the Universe package repository on Ubuntu 19.10 \(Eoan Ermine\) or later.
 
+Step 1\) Query the package repository to confirm that ipmctl is available:
+
+```text
+apt update
+apt search ipmctl
+apt info ipmctl
+```
+
+Example:
+
+```text
+$ apt search ipmctl 
+Sorting... Done
+Full Text Search... Done
+ipmctl/eoan 02.00.00.3474+really01.00.00.3469-1 amd64
+  utility for configuring and managing Intel Optane DC persistent memory modules
+
+ipmctl-monitor/eoan 02.00.00.3474+really01.00.00.3469-1 amd64
+  daemon for monitoring health and status of Intel Optane DC modules
+
+libipmctl-dev/eoan 02.00.00.3474+really01.00.00.3469-1 amd64
+  library for managing Intel Optane DC persistent memory modules - devel
+
+libipmctl3/eoan 02.00.00.3474+really01.00.00.3469-1 amd64
+  library for managing Intel Optane DC persistent memory modules
+  
+
+$ apt info ipmctl 
+Package: ipmctl
+Version: 02.00.00.3474+really01.00.00.3469-1
+Priority: optional
+Section: universe/admin
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Adam Borowski <kilobyte@angband.pl>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 105 kB
+Depends: libc6 (>= 2.2.5), libipmctl3 (>= 02.00.00.3474+really01.00.00.3469)
+Homepage: https://github.com/intel/ipmctl
+Download-Size: 65.5 kB
+APT-Sources: http://us-central1.gce.archive.ubuntu.com/ubuntu eoan/universe amd64 Packages
+Description: utility for configuring and managing Intel Optane DC persistent memory modules
+ This package provides a CLI with the following functionality:
+  * Discover PMMs on the platform.
+  * Provision the platform memory configuration.
+  * View and update the firmware on PMMs.
+  * Configure data-at-rest security on PMMs.
+  * Monitor PMM health.
+  * Track performance of PMMs.
+  * Debug and troubleshoot PMMs.
+```
+
+
+
+Step 2\) Install the ipmctl package:
+
+```text
+sudo apt install ipmctl
+```
+
+Step 3\) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
+
+```text
+$ sudo ipmctl help
+```
 {% endtab %}
 
 {% tab title="Debian" %}
