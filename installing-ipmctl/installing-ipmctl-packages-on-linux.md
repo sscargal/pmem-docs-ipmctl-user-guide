@@ -258,10 +258,6 @@ Step 3\) Review the help and man pages or continue to the [Basic Usage](../basic
 $ sudo ipmctl help
 ```
 {% endtab %}
-
-{% tab title="Debian" %}
-
-{% endtab %}
 {% endtabs %}
 
 ### Using ipmctl
