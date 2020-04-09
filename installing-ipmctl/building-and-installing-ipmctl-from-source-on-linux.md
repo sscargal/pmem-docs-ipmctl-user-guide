@@ -373,9 +373,138 @@ Install ipmctl using:
 sudo make install
 ```
 {% endtab %}
-{% endtabs %}
 
-### Using ipmctl
+{% tab title="Ubuntu" %}
+This procedure provides the steps for building and installing ipmctl on Ubuntu.
+
+### Prerequisites
+
+ipmctl has a dependency on libsafec-devel, libndctl-devel and rubygem-asciidoctor. Steps to install these packages is provided below.
+
+#### Install the required utilities
+
+This procedure requires the following utilities
+
+* wget
+* git
+* cmake
+* gcc
+* gcc-c++
+* glibc 
+* glibc-static
+
+```text
+sudo apt install wget git cmake pkg-config autoconf doxygen libtool build-essentialUsing ipmctl
+```
+
+#### libsafec
+
+libsafec is available as a package in the default package repository for Ubuntu 19.10 \(Eoan\) or later. For earlier releases, use the `-DSAFECLIB_SRC_DOWNLOAD_AND_STATIC_LINK=ON` option to download safelibc source and build it as a static library with ipmctl. See the Build section below for more information.
+
+Verify the `libsafec` package can be found
+
+```text
+sudo apt info libsafec* libsafec-dev*
+```
+
+Install the libsafec and libsafec-devel packages
+
+```text
+sudo apt install libsafec-3.5.3 libsafec-dev
+```
+
+
+
+#### libndctl-devel
+
+The development files can be installed from source code or packages. See '[Installing NDCTL & DAXCTL](https://docs.pmem.io/ndctl-user-guide/installing-ndctl)' in the ndctl user guide for detailed instructions. 
+
+To install the package:
+
+```text
+sudo apt install libndctl-dev
+```
+
+
+
+#### Asciidoctor
+
+The `ruby-asciidoctor` package can be found in the default package repository. 
+
+Install the ruby-asciidoctor and optional ruby-asciidoctor-pdf packages
+
+```text
+sudo apt install ruby-asciidoctor ruby-asciidoctor-pdf
+```
+
+
+
+### Build
+
+Create a temporary build area
+
+```text
+mkdir ~/downloads
+cd ~/downloads
+```
+
+Clone the ipmctl GitHub repository
+
+```text
+git clone https://github.com/intel/ipmctl
+```
+
+The github repository contains the latest and previous versions. Refer to the 'Releases' table in '[Installing IPMCTL](./)' to decide which version of ipmctl you need to build.
+
+To list all branches:
+
+```text
+cd ipmctl
+git branch -a
+```
+
+Example:
+
+```text
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/gh-pages
+  remotes/origin/master
+  remotes/origin/master_1_0
+  remotes/origin/master_2_0
+  remotes/origin/testing
+```
+
+Checkout 01.00.00.xxxx
+
+```text
+git checkout master_1_0
+```
+
+Checkout 02.00.00.xxxx
+
+```text
+git checkout master_2_0
+```
+
+If you installed the safelibc package, use:
+
+```text
+mkdir output && cd output
+cmake -DRELEASE=ON -DCMAKE_INSTALL_PREFIX=/ ..
+make -j all
+```
+
+To have ipmctl cmake download and statically build safelibc, use:
+
+```text
+mkdir output && cd output
+cmake -DRELEASE=ON -DSAFECLIB_SRC_DOWNLOAD_AND_STATIC_LINK=ON -DCMAKE_INSTALL_PREFIX=/ ..
+make -j all
+```
+{% endtab %}
+{% endtabs %}
 
 Go to the [Basic Usage](../basic-usage.md) section of this user guide for more information.
 
