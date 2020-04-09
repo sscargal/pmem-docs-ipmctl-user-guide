@@ -379,7 +379,7 @@ This procedure provides the steps for building and installing ipmctl on Ubuntu.
 
 ### Prerequisites
 
-ipmctl has a dependency on libsafec-devel, libndctl-devel and rubygem-asciidoctor. Steps to install these packages is provided below.
+ipmctl has a dependency on libsafec-devel, libndctl-devel and ruby-asciidoctor. Steps to install these packages is provided below.
 
 #### Install the required utilities
 
@@ -391,7 +391,6 @@ This procedure requires the following utilities
 * gcc
 * gcc-c++
 * glibc 
-* glibc-static
 
 ```text
 sudo apt install wget git cmake pkg-config autoconf doxygen libtool build-essentialUsing ipmctl
