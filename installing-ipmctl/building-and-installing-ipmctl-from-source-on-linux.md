@@ -393,7 +393,7 @@ This procedure requires the following utilities
 * glibc 
 
 ```text
-sudo apt install wget git cmake pkg-config autoconf doxygen libtool build-essentialUsing ipmctl
+sudo apt install wget git cmake pkg-config autoconf doxygen libtool build-essential
 ```
 
 #### libsafec
