@@ -388,13 +388,9 @@ This procedure requires the following utilities
 * wget
 * git
 * cmake
-* pkg-config
-* autoconf
-* doxygen
-* libtool
-* gcc 
+* gcc
 * gcc-c++
-* glibc
+* glibc 
 
 ```text
 sudo apt update
