@@ -388,11 +388,16 @@ This procedure requires the following utilities
 * wget
 * git
 * cmake
-* gcc
+* pkg-config
+* autoconf
+* doxygen
+* libtool
+* gcc 
 * gcc-c++
-* glibc 
+* glibc
 
 ```text
+sudo apt update
 sudo apt install wget git cmake pkg-config autoconf doxygen libtool build-essential
 ```
 
