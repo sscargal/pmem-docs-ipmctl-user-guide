@@ -428,6 +428,17 @@ sudo apt install libndctl-dev
 
 #### Asciidoctor
 
+**Ubuntu 16.04 & 18.04**
+
+Install asciidoctor using the ruby gems
+
+```text
+sudo apt install ruby
+sudo gem install asciidoctor asciidoctor-pdf --pre
+```
+
+**Ubuntu 19.04 or later**
+
 The `ruby-asciidoctor` package can be found in the default package repository. 
 
 Install the ruby-asciidoctor and optional ruby-asciidoctor-pdf packages
