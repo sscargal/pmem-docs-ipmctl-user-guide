@@ -18,7 +18,7 @@ $ ipmctl delete [OPTIONS] -dimm (DimmIds) -pcd (Config)
 Clear the Cin, Cout, Ccur tables from all manageable modules
 
 ```text
-$ delete -dimm -pcd Config
+$ ipmctl delete -dimm -pcd Config
 ```
 
 ## **Limitations**
