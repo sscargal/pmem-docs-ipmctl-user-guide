@@ -16,36 +16,33 @@ ipmctl is available for both Linux and Microsoft Windows. Follow the links below
 
 ## Releases
 
-ipmctl supports all product generations for Intel Optane persistent memory and is backward compatible with older generations. The table describes the ipmctl version required for each product generation.
+ipmctl supports all product generations for Intel Optane persistent memory. The table describes the ipmctl version required for each product generation.
 
 <table>
   <thead>
     <tr>
       <th style="text-align:left">ipmctl version</th>
+      <th style="text-align:left">GitHub Branch</th>
       <th style="text-align:left">Intel Optane Persistent Memory Generation</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">01.00.00.xxxx</td>
+      <td style="text-align:left">master_1_0 branch</td>
       <td style="text-align:left">
-        <p>1st Generation Intel Optane Persistent Memory Series 100</p>
+        <p>1st Generation/Intel Optane Persistent Memory Series 100</p>
         <p>Code name: Apache Pass</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">02.00.00.xxxx</td>
+      <td style="text-align:left">master_2_0 branch</td>
       <td style="text-align:left">
-        <p>1st Generation Intel Optane Persistent Memory Series 100</p>
-        <p>Code name: Apache Pass
-          <br />Recommend using v02.00.00.3693 or later</p>
-        <p>
-          <br />2nd Generation Intel Optane Persistent Memory Series 200</p>
+        <p>2nd Generation/Intel Optane Persistent Memory Series 200</p>
         <p>Code Name: Barlow Pass</p>
       </td>
     </tr>
   </tbody>
 </table>
-
-
 
