@@ -112,40 +112,6 @@ Clone the ipmctl GitHub repository
 git clone https://github.com/intel/ipmctl
 ```
 
-The github repository contains the latest and previous versions. Refer to the 'Releases' table in '[Installing IPMCTL](./)' to decide which version of ipmctl you need to build.
-
-To list all branches:
-
-```text
-cd ipmctl
-git branch -a
-```
-
-Example:
-
-```text
-$ git branch -a
-* master
-  remotes/origin/HEAD -> origin/master
-  remotes/origin/gh-pages
-  remotes/origin/master
-  remotes/origin/master_1_0
-  remotes/origin/master_2_0
-  remotes/origin/testing
-```
-
-Checkout 01.00.00.xxxx
-
-```text
-git checkout master_1_0
-```
-
-Checkout 02.00.00.xxxx
-
-```text
-git checkout master_2_0
-```
-
 If you installed the safelibc package, use:
 
 ```text
@@ -388,9 +354,13 @@ This procedure requires the following utilities
 * wget
 * git
 * cmake
-* gcc
+* pkg-config
+* autoconf
+* doxygen
+* libtool
+* gcc 
 * gcc-c++
-* glibc 
+* glibc
 
 ```text
 sudo apt update
@@ -516,6 +486,8 @@ make -j all
 ```
 {% endtab %}
 {% endtabs %}
+
+
 
 Go to the [Basic Usage](../basic-usage.md) section of this user guide for more information.
 
