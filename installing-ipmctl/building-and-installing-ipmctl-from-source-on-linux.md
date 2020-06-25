@@ -110,6 +110,7 @@ Clone the ipmctl GitHub repository
 
 ```text
 git clone https://github.com/intel/ipmctl
+cd ipmctl
 ```
 
 If you installed the safelibc package, use:
