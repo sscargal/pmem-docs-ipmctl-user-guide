@@ -1,5 +1,9 @@
 # Installing IPMCTL packages on Linux
 
+{% hint style="info" %}
+ipmctl version 1.x was not available through the native Linux package repositories. Version 2.x is available in some package repositories.
+{% endhint %}
+
 The `ipmctl` utility is available in many Linux distribution package repositories.  This approach is the easiest to implement and maintain, compared with [building and installing ipmctl from source](building-and-installing-ipmctl-from-source-on-linux.md). However, the version of ipmctl available in the package repository may not be current.
 
 {% tabs %}
