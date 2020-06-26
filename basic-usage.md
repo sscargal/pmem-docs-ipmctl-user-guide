@@ -12,18 +12,19 @@ Items in square brackets `[..]` are optional. Options, targets, and property val
 
 `ipmctl` commands include:
 
+* create
+* delete
+* dump
 * help
 * load
 * set
-* delete
 * show
-* create
-* dump
 * start
+* version
 
 More information can be shown for each command using the `-verbose` flag, which is helpful for debugging.
 
-A video recorded by Lenovo shows [How to use ipmctl commands to monitor Intel® Optane™ DC Persistent Memory Module health status on Microsoft Windows](https://www.youtube.com/watch?v=pzSsdcfL-vg). It provides an introduction for using ipmctl. The commands are the same on Linux.
+A video recorded by Lenovo shows [How to use ipmctl commands to monitor Intel® Optane™ DC Persistent Memory Module health status on Microsoft Windows](https://www.youtube.com/watch?v=pzSsdcfL-vg). It provides an introduction to using ipmctl. The commands are the same on Linux.
 
 
 

@@ -15,7 +15,7 @@ ipmctl show [OPTIONS] -socket [TARGETS]
 Display information about all the processors.
 
 ```text
-$ ipmctl show -socket
+# ipmctl show -socket
 
  SocketID | MappedMemoryLimit | TotalMappedMemory
 ==================================================
@@ -26,7 +26,7 @@ $ ipmctl show -socket
 List all properties for socket 1.
 
 ```text
- ipmctl show -socket 1
+# ipmctl show -socket 1
 
  SocketID | MappedMemoryLimit | TotalMappedMemory
 ==================================================
@@ -36,7 +36,7 @@ List all properties for socket 1.
 Retrieve specific properties for each processor.
 
 ```text
-$ ipmctl show -d MappedMemoryLimit -socket
+# ipmctl show -d MappedMemoryLimit -socket
 
 ---SocketID=0x0000---
    MappedMemoryLimit=4608.0 GiB

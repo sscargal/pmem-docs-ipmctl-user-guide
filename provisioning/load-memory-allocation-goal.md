@@ -1,6 +1,6 @@
 # Load Memory Allocation Goal
 
-Load a memory allocation goal from a file onto one or more persistent memory modules.
+Load a memory allocation goal from a file collected by the [dump command](dump-memory-allocation-settings.md) onto one or more persistent memory modules.
 
 {% hint style="warning" %}
 **WARNING:** Provisioning or changing modes may result in data loss. Data should be backed up to other storage before executing this command.

@@ -10,7 +10,7 @@ $ ipmctl set [OPTIONS] -dimm [TARGETS] NewPassphrase=(string) ConfirmPassphrase=
 
 * `-dimm (DimmIDs)`
 
-  Set the passphrase on specific modules by supplying one or more comma separated DimmIDs. However, this is not recommended as it may put the system in an undesirable state. The default is to set the passphrase on all manageable modules.
+  Set the passphrase on specific modules by supplying one or more comma-separated DimmIDs. However, this is not recommended as it may put the system in an undesirable state. The default is to set the passphrase on all manageable modules.
 
 ## **Properties**
 
@@ -19,19 +19,19 @@ $ ipmctl set [OPTIONS] -dimm [TARGETS] NewPassphrase=(string) ConfirmPassphrase=
 
 ## **Examples**
 
-Set a passphrase on DIMM 0x0001
+Set a passphrase on DIMM 0x0001 to '123':
 
 ```text
 $ ipmctl set -dimm 0x0001 NewPassphrase=123 ConfirmPassphrase=123
 ```
 
-Set a passphrase on DIMM 0x0001 by supplying the passphrase in the file mypassphrase.file.
+Set a passphrase on DIMM 0x0001 by supplying the passphrase in the 'mypassphrase' file.
 
 ```text
-ipmctl set -source mypassphrase.file -dimm 0x0001 NewPassphrase="" ConfirmPassphrase=""
+ipmctl set -source mypassphrase -dimm 0x0001 NewPassphrase="" ConfirmPassphrase=""
 ```
 
-In the previous example, the format of the file would be:
+In the previous example, the format of the 'mypassphrase' file would be:
 
 ```text
 #ascii
@@ -44,5 +44,5 @@ In order to successfully execute this command:
 
 * The caller must have the appropriate privileges. The specified module must have security disabled and be manageable by the host software.
 * There must not be any goal creation pending.
-* Command is subject to OS Vendor \(OSV\) support. If OSV does not provide support, command will return "Not Supported."
+* The command is subject to OS Vendor \(OSV\) support. If the OSV does not provide support, the command will return "Not Supported."
 

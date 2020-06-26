@@ -8,7 +8,7 @@ ipmctl set [OPTIONS] -dimm [TARGETS] Passphrase=(string) NewPassphrase=(string) 
 
 ## **Targets**
 
-* `-dimm (DimmIDs)`: Changes the passphrase on specific module by supplying one or more comma separated persistent memory module identifiers. However, this is not recommended as it may put the system in an undesirable state. The default is to change the passphrase on all manageable modules.
+* `-dimm (DimmIDs)`: Changes the passphrase on a specific module by supplying one or more comma-separated persistent memory module identifiers. However, this is not recommended as it may put the system in an undesirable state. The default is to change the passphrase on all manageable modules.
 
 ## **Properties**
 
@@ -47,5 +47,5 @@ NewPassphrase=myNewPassphrase
 ## **Limitations**
 
 * The specified module must be manageable by the host software, have security enabled and not be in the "Unlocked, Frozen", "Disabled, Frozen", or "Exceeded" lock states.
-* Command is subject to OS Vendor \(OSV\) support. If OSV does not provide support, command will return "Not Supported."
+* The command is subject to OS Vendor \(OSV\) support. If OSV does not provide support, the command will return "Not Supported."
 

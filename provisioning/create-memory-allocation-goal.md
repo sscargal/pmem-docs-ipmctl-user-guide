@@ -4,7 +4,7 @@
 ipmctl create [OPTIONS] -goal [TARGETS] [PROPERTIES]
 ```
 
-The `ipmctl create -goal` command has many options. A complete list of options can be shown by executing `ipmctl create -help`, or reading the `ipmctl(1)` man page. Once a goal is created, it does not take effect until the system is rebooted. After a reboot, the BIOS configures the requested goal, and clears the goal.
+The `ipmctl create -goal` command has many options. A complete list of options can be shown by executing `ipmctl create -help`, or reading the `ipmctl(1)` man page. Once a goal is created, it does not take effect until the system is rebooted. After a reboot, the BIOS configures the requested goal and clears the goal.
 
 ## **Targets**
 
@@ -27,4 +27,36 @@ The `ipmctl create -goal` command has many options. A complete list of options c
 * The caller must have appropriate privileges.
 * The specified modules must be manageable by the host software and must all have the same SKU.
 * Existing memory allocation goals that have not been applied and any namespaces associated with the requested modules must be deleted before running this command.
+
+## Examples
+
+Configures all the PMem module capacity in Memory Mode:
+
+```text
+ipmctl create -goal MemoryMode=100
+```
+
+Configures all the PMem module capacity as App Direct:
+
+```text
+ipmctl create -goal PersistentMemoryType=AppDirect
+```
+
+Configures the capacity on each PMem module with 20% of the capacity in Memory Mode and the remaining as App Direct capacity that does not use hardware interleaving:
+
+```text
+ipmctl create -goal MemoryMode=20 PersistentMemoryType=AppDirectNotInterleaved
+```
+
+Configures the PMem module capacity across the entire system with 50% in AppDirect \(Interleaved\) and 50% reserved:
+
+```text
+ipmctl create -goal PersistentMemoryType=AppDirect Reserved=50
+```
+
+Configures the PMem module capacity across the entire system with 25% of the capacity in Memory Mode, 25% reserved, and the remaining 50% as App Direct. Configures the PMem module capacity across the entire system with 25% of the capacity in Memory Mode and the remaining 75% as App Direct.
+
+```text
+ipmctl create -goal MemoryMode=25 PersistentMemoryType=AppDirect Reserved=25
+```
 
