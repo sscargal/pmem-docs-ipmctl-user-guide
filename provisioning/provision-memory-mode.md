@@ -4,7 +4,7 @@ Creates a memory allocation goal for a percentage \(0-100\) of total capacity to
 
 ## **Examples**
 
-Configures all the PMem module capacity in Memory Mode.
+Configure 100% of the available capacity on each persistent memory module to be in Memory Mode.
 
 ```text
 $ ipmctl create -goal MemoryMode=100

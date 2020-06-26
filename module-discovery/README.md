@@ -36,7 +36,7 @@ The `DimmHandle` is equivalent to the `DimmUID` and is formatted as 0xABCD, wher
 
 ## DimmUID
 
-The `DimmUID` is a unique identifier specific to each physical module. The unique identifier of an Intel Optane persistent memory module is formatted as VVVV-ML-MMYYSNSNSNSN or VVVV-SNSNSNSN \(if the manufacturing information is not available\) where:
+The `DimmUID` is a unique identifier specific to each physical module. The unique identifier of an Intel Optane DC persistent memory module is formatted as VVVV-ML-MMYYSNSNSNSN or VVVV-SNSNSNSN \(if the manufacturing information is not available\) where:
 
 * VVVV = VendorID
 * ML = Manufacturing Location

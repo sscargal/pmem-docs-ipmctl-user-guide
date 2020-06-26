@@ -1,8 +1,8 @@
 # Provisioning
 
-Intel Optane persistent memory modules can be provisioned into three different operating modes:
+Intel Optane DC persistent memory modules can be provisioned into three different operating modes:
 
-* **App Direct**: Persistent memory exposed as block devices to the operating system and DRAM is used as main memory.
+* **App Direct**: Persistent memory exposed as block devices to operating system and DRAM is used as main memory.
 * **Memory Mode**: Uses persistent memory as main memory and DRAM is used as a cache not explicitly managed by the operating system. Data placement is managed by the memory controller. 
 * **Mixed Mode**: A combination of App Direct and Memory Modes where a percentage of total memory is allocated for Memory Mode, and the rest is used for App Direct.
 

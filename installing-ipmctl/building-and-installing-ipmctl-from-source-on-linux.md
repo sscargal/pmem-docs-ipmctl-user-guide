@@ -417,6 +417,16 @@ mkdir output && cd output
 cmake -DRELEASE=ON -DSAFECLIB_SRC_DOWNLOAD_AND_STATIC_LINK=ON -DCMAKE_INSTALL_PREFIX=/ ..
 make -j all
 ```
+
+
+
+### Install
+
+Install ipmctl using:
+
+```text
+sudo make install
+```
 {% endtab %}
 {% endtabs %}
 

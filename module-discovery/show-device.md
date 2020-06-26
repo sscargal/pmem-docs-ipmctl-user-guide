@@ -132,5 +132,24 @@ $ sudo ipmctl show -d HealthState,LockState -dimm 0x0001
 
 ## **Return Data**
 
-See the ipmctl-show-device\(1\) man page for a detailed explanation of all fields displayed by `ipmctl-show-device`.
+* `HealthState` Overall module health. One of:
+  * Healthy
+  * Noncritical: Maintenance is required.
+  * Critical: Features or performance are degraded due to failure.
+  * Fatal: Data loss has occurred or is imminent. In this case, the firmware will disable the media and access to user data and operations that require use of the media will fail.
+  * Non-functional: The module is present but is non-responsive via the DDRT communication path. It may be possible to communicate with this module via SMBus for a subset of commands.
+  * Unmanageable: The module is not supported by this version of the software
+  * Unknown: Unable to determine the module's health state.
+* `ActionRequired`: If there are events for this device that require corrective action or acknowledgment. Refer to the command Show Events for more information about events. One of:
+  * 0: No action required events
+  * 1: One or more action required events
+* `LockState` is the current security state of the persistent memory on the module. One of:
+  * Unknown - The security state cannot be determined \(e.g., when the module is not manageable by the software\).
+  * Disabled - Security is not enabled.
+  * Disabled, Frozen - Security is not enabled. A reboot is required to change the security state.
+  * Unlocked - Security is enabled and unlocked.
+  * Unlocked, Frozen - Security is enabled and unlocked. A reboot is required to change the security state.
+  * Locked - Security is enabled and locked.
+  * Exceeded - The passphrase limit has been reached. A power cycle is required to change the security state.
+  * Not Supported - Security is not supported on the module.
 
