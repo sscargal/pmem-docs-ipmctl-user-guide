@@ -171,6 +171,12 @@ If the EPEL repository is not listed, install and enable it using:
 sudo yum install epel-release
 ```
 
+#### Enable the PowerTools repository
+
+```text
+sudo yum config-manager --set-enabled PowerTools
+```
+
 #### Install the required utilities
 
 This procedure requires the following utilities
@@ -184,7 +190,7 @@ This procedure requires the following utilities
 * glibc-static
 
 ```text
-sudo yum install wget git cmake gcc gcc-g++ glibc glibc-static 
+sudo yum install wget git cmake gcc gcc-c++ glibc glibc-static 
 ```
 
 #### libsafec
