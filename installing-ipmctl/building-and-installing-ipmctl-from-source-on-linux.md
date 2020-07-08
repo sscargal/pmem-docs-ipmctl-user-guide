@@ -23,7 +23,7 @@ This procedure requires the following utilities
 * glibc-static
 
 ```text
-sudo dnf install wget git cmake gcc gcc-g++ glibc glibc-static 
+sudo dnf install wget git cmake gcc gcc-c++ glibc glibc-static 
 ```
 
 #### libsafec
