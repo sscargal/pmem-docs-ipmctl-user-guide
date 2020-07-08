@@ -208,7 +208,7 @@ yum info libsafec libsafec-devel
 Example:
 
 ```text
-$ yum info safelibc
+$ yum info libsafec*
 
 Available Packages
 Name        : libsafec
