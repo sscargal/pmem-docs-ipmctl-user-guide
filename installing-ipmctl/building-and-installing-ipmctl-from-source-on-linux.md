@@ -113,6 +113,49 @@ git clone https://github.com/intel/ipmctl
 cd ipmctl
 ```
 
+{% hint style="info" %}
+**Optional**: To build a different release version, use git to checkout the version branch, eg:
+
+List all available branches using the following. It shows a master\_1\_0 and master\_2\_0 for version 1.x and 2.x respectively. This represents the current version for each release.
+
+```text
+$ # git branch -a | grep master
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/master_1_0
+  remotes/origin/master_2_0
+```
+
+Checkout the version branch and continue the build process:
+
+```text
+$ git checkout -b remotes/origin/master_1_0
+Switched to a new branch 'remotes/origin/master_1_0'
+```
+
+To build a specific version, list the tags:
+
+```text
+$ git tag
+[...]
+v01.00.00.3481
+v01.00.00.3494
+v01.00.00.3497
+[...]
+v02.00.00.3781
+v02.00.00.3785
+v02.00.00.3791
+```
+
+Create a new branch from a specific tagged version, use the following and continue with the build process:
+
+```text
+$ git checkout tags/v02.00.00.3791 -b v02.00.00.3791
+Switched to a new branch 'v02.00.00.3791'
+```
+{% endhint %}
+
 If you installed the safelibc package, use:
 
 ```text
@@ -287,6 +330,49 @@ git clone https://github.com/intel/ipmctl
 cd ipmctl
 ```
 
+{% hint style="info" %}
+**Optional**: To build a different release version, use git to checkout the version branch, eg:
+
+List all available branches using the following. It shows a master\_1\_0 and master\_2\_0 for version 1.x and 2.x respectively. This represents the current version for each release.
+
+```text
+$ # git branch -a | grep master
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/master_1_0
+  remotes/origin/master_2_0
+```
+
+Checkout the version branch and continue the build process:
+
+```text
+$ git checkout -b remotes/origin/master_1_0
+Switched to a new branch 'remotes/origin/master_1_0'
+```
+
+To build a specific version, list the tags:
+
+```text
+$ git tag
+[...]
+v01.00.00.3481
+v01.00.00.3494
+v01.00.00.3497
+[...]
+v02.00.00.3781
+v02.00.00.3785
+v02.00.00.3791
+```
+
+Create a new branch from a specific tagged version, use the following and continue with the build process:
+
+```text
+$ git checkout tags/v02.00.00.3791 -b v02.00.00.3791
+Switched to a new branch 'v02.00.00.3791'
+```
+{% endhint %}
+
 If you installed the safelibc package, use:
 
 ```text
@@ -408,6 +494,49 @@ Clone the ipmctl GitHub repository
 ```text
 git clone https://github.com/intel/ipmctl
 ```
+
+{% hint style="info" %}
+**Optional**: To build a different release version, use git to checkout the version branch, eg:
+
+List all available branches using the following. It shows a master\_1\_0 and master\_2\_0 for version 1.x and 2.x respectively. This represents the current version for each release.
+
+```text
+$ # git branch -a | grep master
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/master_1_0
+  remotes/origin/master_2_0
+```
+
+Checkout the version branch and continue the build process:
+
+```text
+$ git checkout -b remotes/origin/master_1_0
+Switched to a new branch 'remotes/origin/master_1_0'
+```
+
+To build a specific version, list the tags:
+
+```text
+$ git tag
+[...]
+v01.00.00.3481
+v01.00.00.3494
+v01.00.00.3497
+[...]
+v02.00.00.3781
+v02.00.00.3785
+v02.00.00.3791
+```
+
+Create a new branch from a specific tagged version, use the following and continue with the build process:
+
+```text
+$ git checkout tags/v02.00.00.3791 -b v02.00.00.3791
+Switched to a new branch 'v02.00.00.3791'
+```
+{% endhint %}
 
 If you installed the safelibc package, use:
 
