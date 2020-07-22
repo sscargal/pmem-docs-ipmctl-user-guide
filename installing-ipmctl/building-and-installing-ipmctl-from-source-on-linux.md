@@ -127,10 +127,10 @@ $ # git branch -a | grep master
   remotes/origin/master_2_0
 ```
 
-Checkout the version branch and continue the build process:
+Example: Checkout the version 1.x branch and continue the build process:
 
-```text
-$ git checkout -b remotes/origin/master_1_0
+```
+$ git checkout remotes/origin/master_1_0
 Switched to a new branch 'remotes/origin/master_1_0'
 ```
 
@@ -344,10 +344,10 @@ $ # git branch -a | grep master
   remotes/origin/master_2_0
 ```
 
-Checkout the version branch and continue the build process:
+Example: Checkout the version 1.x branch and continue the build process:
 
 ```text
-$ git checkout -b remotes/origin/master_1_0
+$ git checkout remotes/origin/master_1_0
 Switched to a new branch 'remotes/origin/master_1_0'
 ```
 
@@ -509,10 +509,10 @@ $ # git branch -a | grep master
   remotes/origin/master_2_0
 ```
 
-Checkout the version branch and continue the build process:
+Example: Checkout the version 1.x branch and continue the build process:
 
-```text
-$ git checkout -b remotes/origin/master_1_0
+```
+$ git checkout remotes/origin/master_1_0
 Switched to a new branch 'remotes/origin/master_1_0'
 ```
 
@@ -565,6 +565,8 @@ sudo make install
 ```
 {% endtab %}
 {% endtabs %}
+
+
 
 
 
