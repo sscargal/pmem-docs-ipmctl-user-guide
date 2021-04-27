@@ -564,7 +564,131 @@ Install ipmctl using:
 sudo make install
 ```
 {% endtab %}
+
+{% tab title="SLES/OpenSUSE" %}
+This procedure provides the steps for building and installing ipmctl on SUSE Linux for Enterprise \(SLES\) and OpenSUSE \(Leap\).
+
+### Prerequisites
+
+ipmctl has a dependency on libsafec-devel, libndctl-devel and rubygem-asciidoctor. Steps to install these packages is provided below.
+
+#### Install the required utilities
+
+This procedure requires the following utilities
+
+* wget
+* git
+* cmake
+* gcc
+* gcc-c++
+* gem
+* glibc 
+* glibc-static
+
+```text
+sudo zypper install wget git cmake gcc gcc-c++ gem glibc glibc-static 
+```
+
+#### libsafec
+
+When compiling ipmctl from source code, use the `-DSAFECLIB_SRC_DOWNLOAD_AND_STATIC_LINK=ON` option to download safelibc source and build it as a static library with ipmctl. See the Build section below for more information.
+
+#### libndctl-devel
+
+The development files can be installed from source code or packages. See '[Installing NDCTL & DAXCTL](https://docs.pmem.io/ndctl-user-guide/installing-ndctl)' in the ndctl user guide for detailed instructions. If you installed ndctl using the packages, install the ndctl-devel package using:
+
+```text
+sudo zypper install libndctl-devel
+```
+
+If you built ndctl from the source code, the required header files should already be available. 
+
+#### Asciidoctor
+
+Install the rubygem-asciidoctor and optional rubygem-asciidoctor-pdf packages using the gem command
+
+```text
+sudo gem install asciidoctor asciidoctor-pdf
+```
+
+### Build
+
+Create a temporary build area
+
+```text
+mkdir ~/downloads
+cd ~/downloads
+```
+
+Clone the ipmctl GitHub repository
+
+```text
+git clone https://github.com/intel/ipmctl
+cd ipmctl
+```
+
+{% hint style="info" %}
+**Optional**: To build a different release version, use git to checkout the version branch, eg:
+
+List all available branches using the following. It shows a master\_1\_0 and master\_2\_0 for version 1.x and 2.x respectively. This represents the current version for each release.
+
+```text
+$ # git branch -a | grep master
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/master_1_0
+  remotes/origin/master_2_0
+```
+
+Example: Checkout the version 1.x branch and continue the build process:
+
+```
+$ git checkout remotes/origin/master_1_0
+Switched to a new branch 'remotes/origin/master_1_0'
+```
+
+To build a specific version, list the tags:
+
+```text
+$ git tag
+[...]
+v01.00.00.3481
+v01.00.00.3494
+v01.00.00.3497
+[...]
+v02.00.00.3781
+v02.00.00.3785
+v02.00.00.3791
+```
+
+Create a new branch from a specific tagged version, use the following and continue with the build process:
+
+```text
+$ git checkout tags/v02.00.00.3791 -b v02.00.00.3791
+Switched to a new branch 'v02.00.00.3791'
+```
+{% endhint %}
+
+The following cmake command will download and statically build safelibc:
+
+```text
+mkdir output && cd output
+cmake -DRELEASE=ON -DSAFECLIB_SRC_DOWNLOAD_AND_STATIC_LINK=ON -DCMAKE_INSTALL_PREFIX=/usr/local ..
+make -j all
+```
+
+### Install
+
+Install ipmctl using:
+
+```text
+sudo make install
+```
+{% endtab %}
 {% endtabs %}
+
+
 
 
 
@@ -641,5 +765,9 @@ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/lib/pkgconfig:usr/local/lib64/p
 
 Alternatively, add `-DSAFECLIB_SRC_DOWNLOAD_AND_STATIC_LINK=ON`to the cmake file to download and build the static version of libsafec.
 
+#### Issue: -- cc: internal compiler error: Killed \(program cc1\)
 
+**Solution:**
+
+Running make -j all runs lots of processes, which use more memory. The problem above occurs when your system runs out of memory. Use `make` instead of `make -j all`.
 
