@@ -25,3 +25,5 @@ Architecture Diagram:
 
 ![](.gitbook/assets/capture.PNG)
 
+To learn more about how ipmctl works with the hardware see the [Intel® Optane™ Persistent Memory OS Provisioning Specification](https://cdrdv2.intel.com/v1/dl/getContent/634430), which describes all the firmware interface commands used for this operation. 
+
