@@ -57,7 +57,7 @@ Set the media temperature on all manageable modules to 100 degrees Celsius.
 Clear the injected media temperature on all manageable modules
 
 ```
-# ipmctl set -dimm Clear=1 Temperature=1
+# ipmctl set -dimm Temperature=1 Clear=1
 ```
 
 Poison address 0x10000100 on module 0x0001
@@ -129,6 +129,6 @@ Clearing the fault will not cause any data loss.
 Clear the Fatal Media Error on PMem module 0x20001
 
 ```
-# ipmctl set -dimm 0x2001 Clear=1 FatalMediaError=1
+# ipmctl set -dimm 0x2001 FatalMediaError=1 Clear=1 
 ```
 
