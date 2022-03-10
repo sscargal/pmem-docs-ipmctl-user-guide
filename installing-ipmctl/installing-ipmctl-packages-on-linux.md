@@ -1,21 +1,21 @@
 # Installing IPMCTL packages on Linux
 
-The `ipmctl` utility is available in many Linux distribution package repositories.  This approach is the easiest to implement and maintain, compared with [building and installing ipmctl from source](building-and-installing-ipmctl-from-source-on-linux.md). However, the version of ipmctl available in the package repository may not be current.
+The `ipmctl` utility is available in many Linux distribution package repositories.  This approach is the easiest to install and maintain, compared with [building and installing ipmctl from source](building-and-installing-ipmctl-from-source-on-linux.md). However, the version of ipmctl available in the package repository may not be current.
 
 {% tabs %}
 {% tab title="Fedora" %}
 The ipmctl package for v02.00.00.xxxx or later is available in the default package repository on Fedora.
 
-Step 1\) Query the package repository to confirm that ipmctl is available:
+Step 1) Query the package repository to confirm that ipmctl is available:
 
-```text
+```
 dnf search ipmctl
 dnf info ipmctl
 ```
 
 Example:
 
-```text
+```
 $ dnf search ipmctl
 Last metadata expiration check: 1:24:31 ago on Fri 27 Mar 2020 06:27:17 PM MDT.
 ================================================== Name Exactly Matched: ipmctl ==================================================
@@ -56,31 +56,31 @@ Description  : Utility for managing Intel Optane DC persistent memory modules
 
 ```
 
-Step 2\) Install the ipmctl package:
+Step 2) Install the ipmctl package:
 
-```text
+```
 sudo dnf install ipmctl
 ```
 
-Step 3\) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
+Step 3) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
 
-```text
+```
 $ sudo ipmctl help
 ```
 {% endtab %}
 
 {% tab title="RHEL & CentOS" %}
-The ipmctl package is available on CentOS, RHEL, and RHEL for SAP HANA v7.5 or later in the EPEL repository \(Extra Packages for Enterprise Linux\).
+The ipmctl package is available on CentOS, RHEL, and RHEL for SAP HANA v7.5 or later in the EPEL repository (Extra Packages for Enterprise Linux).
 
-Step 1\) Verify the EPEL repository is active:
+Step 1) Verify the EPEL repository is active:
 
-```text
+```
 $ yum repolist
 ```
 
 Example:
 
-```text
+```
 $ sudo yum repolist
 repo id                                                       repo name                                                                                          status
 epel/x86_64                                                   Extra Packages for Enterprise Linux 7 - x86_64                                                     13,217
@@ -88,19 +88,19 @@ epel/x86_64                                                   Extra Packages for
 
 If the EPEL repository is not listed, install and activate it using:
 
-```text
+```
 $ sudo yum install epel-release
 ```
 
-Step 2\) Query the package repository to confirm that ipmctl is available:
+Step 2) Query the package repository to confirm that ipmctl is available:
 
-```text
+```
 sudo yum info ipmctl
 ```
 
 Example:
 
-```text
+```
 $ sudo yum info ipmctl 
 
 Available Packages
@@ -124,15 +124,15 @@ Description : Utility for managing Intel Optane DC persistent memory modules
             : Debug and troubleshoot DCPMMs.
 ```
 
-Step 3\) Install the ipmctl package:
+Step 3) Install the ipmctl package:
 
-```text
+```
 sudo yum install ipmctl
 ```
 
-Step 4\) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
+Step 4) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
 
-```text
+```
 $ sudo ipmctl help
 ```
 {% endtab %}
@@ -140,15 +140,15 @@ $ sudo ipmctl help
 {% tab title="SLES & OpenSUSE" %}
 The ipmctl package is available in the default package repository on SUSE, OpenSUSE, and SUSE for SAP HANA 12.4 or later.
 
-Step 1\) Query the package repository to confirm that ipmctl is available:
+Step 1) Query the package repository to confirm that ipmctl is available:
 
-```text
+```
 sudo zypper info ipmctl
 ```
 
 Example:
 
-```text
+```
 $ sudo zypper info ipmctl 
 
 Information for package ipmctl:
@@ -178,23 +178,23 @@ Description    :
 
 3\) Install the ipmctl package:
 
-```text
+```
 sudo zypper install ipmctl
 ```
 
 4\) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
 
-```text
+```
 $ sudo ipmctl help
 ```
 {% endtab %}
 
 {% tab title="Ubuntu" %}
-The ipmctl package for v02.00.00.xxxx or later is available in the Universe package repository on Ubuntu 19.10 \(Eoan Ermine\) or later.
+The ipmctl package for v02.00.00.xxxx or later is available in the Universe package repository on Ubuntu 19.10 (Eoan Ermine) or later.
 
-Step 1\) Query the package repository to confirm that ipmctl is available:
+Step 1) Query the package repository to confirm that ipmctl is available:
 
-```text
+```
 apt update
 apt search ipmctl
 apt info ipmctl
@@ -202,7 +202,7 @@ apt info ipmctl
 
 Example:
 
-```text
+```
 $ apt search ipmctl 
 Sorting... Done
 Full Text Search... Done
@@ -246,15 +246,15 @@ Description: utility for configuring and managing Intel Optane DC persistent mem
 
 
 
-Step 2\) Install the ipmctl package:
+Step 2) Install the ipmctl package:
 
-```text
+```
 sudo apt install ipmctl
 ```
 
-Step 3\) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
+Step 3) Review the help and man pages or continue to the [Basic Usage](../basic-usage.md) section of this user guide for a quick introduction and more information.
 
-```text
+```
 $ sudo ipmctl help
 ```
 {% endtab %}
@@ -263,4 +263,3 @@ $ sudo ipmctl help
 ### Using ipmctl
 
 Go to the [Basic Usage](../basic-usage.md) section of this user guide for more information.
-

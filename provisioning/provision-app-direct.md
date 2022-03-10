@@ -4,27 +4,26 @@ Creates a memory allocation goal for App Direct in either one fully interleaved 
 
 ## **Examples**
 
-Configures all the PMem module capacity in ****AppDirect mode with all modules in an interleaved set:
+Configures all the PMem module capacity in **** AppDirect mode with all modules in an interleaved set:
 
-```text
+```
 $ ipmctl create -goal PersistentMemoryType=AppDirect
 ```
 
-Configures all the PMem module capacity in ****AppDirect mode with all modules in an interleaved set:
+Configures all the PMem module capacity in **** AppDirect mode with all modules in an interleaved set:
 
-```text
+```
 $ ipmctl create -goal PersistentMemoryType=AppDirectNotInterleaved
 ```
 
-Configures the PMem module capacity across the entire system with 50% in AppDirect \(Interleaved\) and 50% reserved:
+Configures the PMem module capacity across the entire system with 50% in AppDirect (Interleaved) and 50% reserved:
 
-```text
+```
 ipmctl create -goal PersistentMemoryType=AppDirect Reserved=50
 ```
 
 Create an Interleaved AppDirect goal using all modules in Socket0:
 
-```text
+```
 $ ipmctl create -goal -socket 0x0000 PersistentMemoryType=AppDirect
 ```
-

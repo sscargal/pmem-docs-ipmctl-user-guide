@@ -23,11 +23,6 @@
   * [Dump Memory Allocation Settings](provisioning/dump-memory-allocation-settings.md)
   * [Load Memory Allocation Goal](provisioning/load-memory-allocation-goal.md)
   * [Delete Memory Allocation Goal](provisioning/delete-memory-allocation-goal.md)
-* [Security](security/README.md)
-  * [Enable Device Security](security/enable-device-security.md)
-  * [Change Device Passphrase](security/change-device-passphrase.md)
-  * [Change Device Security](security/change-device-security.md)
-  * [Erase Device Data](security/erase-device-data.md)
 * [Instrumentation](instrumentation/README.md)
   * [Show Sensor](instrumentation/show-sensor.md)
   * [Change Sensor Settings](instrumentation/change-sensor-settings.md)
@@ -43,4 +38,3 @@
 * [Support and Maintenance](support-and-maintenance/README.md)
   * [Show Events](support-and-maintenance/show-events.md)
   * [Version and Firmware](support-and-maintenance/version-and-firmware.md)
-
