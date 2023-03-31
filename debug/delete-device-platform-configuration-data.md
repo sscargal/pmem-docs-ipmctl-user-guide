@@ -4,8 +4,8 @@ When `Config` is specified, the `Current`, `Input Data Size`, `Output Data Size`
 
 > Warning: This command may result in data loss. Data should be backed up to other storage before executing this command.
 
-```text
-$ ipmctl delete [OPTIONS] -dimm (DimmIds) -pcd (Config)
+```
+ipmctl delete [OPTIONS] -dimm (DimmIds) -pcd (Config)
 ```
 
 ## **Targets**
@@ -17,11 +17,9 @@ $ ipmctl delete [OPTIONS] -dimm (DimmIds) -pcd (Config)
 
 Clear the Cin, Cout, Ccur tables from all manageable modules
 
-```text
-$ ipmctl delete -dimm -pcd Config
-```
+<pre><code><strong>$ sudo ipmctl delete -dimm -pcd Config
+</strong></code></pre>
 
 ## **Limitations**
 
-The specified module\(s\) must be manageable by the host software, and if data-at-rest security is enabled, the modules must be unlocked. Any existing namespaces associated with the requested module\(s\) should be deleted before running this command.
-
+The specified module(s) must be manageable by the host software, and if data-at-rest security is enabled, the modules must be unlocked. Any existing namespaces associated with the requested module(s) should be deleted before running this command.

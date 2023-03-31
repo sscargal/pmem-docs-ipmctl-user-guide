@@ -2,7 +2,7 @@
 
 Runs a diagnostic test.
 
-```text
+```
 ipmctl start [OPTIONS] -diagnostic (Quick|Config|Security|FW) -dimm(DIMMIDs)
 ```
 
@@ -20,21 +20,21 @@ ipmctl start [OPTIONS] -diagnostic (Quick|Config|Security|FW) -dimm(DIMMIDs)
 
 Run all diagnostics
 
-```text
-$ ipmctl start -diagnostic
+```
+$ sudo ipmctl start -diagnostic
 ```
 
 Run the quick check diagnostic on module 0x0001
 
-```text
-$ ipmctl start -diagnostic Quick -dimm 0x0001
+```
+$ sudo ipmctl start -diagnostic Quick -dimm 0x0001
 ```
 
 ## **Return Data**
 
 Each diagnostic generates one or more log messages. A successful test generates a single log message per module indicating that no errors were found. A failed test might generate multiple log messages each highlighting a specific error with all the relevant details. Each log contains the following information:
 
-```text
+```
 `TestName`: The test name. One of:
 - `Quick`
 - `Config`
@@ -49,4 +49,3 @@ Each diagnostic generates one or more log messages. A successful test generates 
 
 `Message`: A free form textual description of the error.
 ```
-

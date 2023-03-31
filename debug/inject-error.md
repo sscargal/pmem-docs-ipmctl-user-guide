@@ -51,67 +51,67 @@ This command supports setting or clearing one type of error at a time
 Set the media temperature on all manageable modules to 100 degrees Celsius.
 
 ```
-# ipmctl set -dimm Temperature=100
+$ sudo ipmctl set -dimm Temperature=100
 ```
 
 Clear the injected media temperature on all manageable modules
 
 ```
-# ipmctl set -dimm Temperature=1 Clear=1
+$ sudo ipmctl set -dimm Temperature=1 Clear=1
 ```
 
 Poison address 0x10000100 on module 0x0001
 
 ```
-# ipmctl set -dimm 0x0001 Poison=0x10000200
+$ sudo ipmctl set -dimm 0x0001 Poison=0x10000200
 ```
 
 Clear the injected poison of address 0x10000200 on module 0x0001.
 
 ```
-# ipmctl set -dimm 0x0001 Poison=0x10000200 Clear=1
+$ sudo ipmctl set -dimm 0x0001 Poison=0x10000200 Clear=1
 ```
 
 Trigger an artificial package sparing on all manageable modules.
 
 ```
-# ipmctl set -dimm PackageSparing=1
+$ sudo ipmctl set -dimm PackageSparing=1
 ```
 
 Trigger an artificial package sparing on module 0x0001.
 
 ```
-# ipmctl set -dimm 0x0001 PackageSparing=1
+$ sudo ipmctl set -dimm 0x0001 PackageSparing=1
 ```
 
 Set the life remaining percentage on all manageable modules to 10%.
 
 ```
-# ipmctl set -dimm PercentageRemaining=10
+$ sudo ipmctl set -dimm PercentageRemaining=10
 ```
 
 Set the life remaining percentage module 0x0001 to 10%.
 
 ```
-# ipmctl set -dimm 0x0001 PercentageRemaining=10
+$ sudo ipmctl set -dimm 0x0001 PercentageRemaining=10
 ```
 
 Clear the injected remaining life percentage on all manageable modules. The value of PercentageRemaining is irrelevant.
 
 ```
-$ ipmctl set -dimm PercentageRemaining=10 Clear=1
+$ sudo ipmctl set -dimm PercentageRemaining=10 Clear=1
 ```
 
 Trigger an artificial Asynchronous DRAM Refresh (ADR) failure on all manageable modules, which will result in a dirty shutdown on each module on the next reboot.
 
 ```
-$ ipmctl set -dimm DirtyShutdown=1
+$ sudo ipmctl set -dimm DirtyShutdown=1
 ```
 
 Trigger an artificial Asynchronous DRAM Refresh (ADR) failure on module 0x0001, which will result in a dirty shutdown on each module on the next reboot.
 
 ```
-$ ipmctl set -dimm 0x0001 DirtyShutdown=1
+$ sudo ipmctl set -dimm 0x0001 DirtyShutdown=1
 ```
 
 Simulate a Fatal Media Error on PMem module 0x2001.&#x20;
@@ -123,12 +123,12 @@ Clearing the fault will not cause any data loss.
 {% endhint %}
 
 ```
-# ipmctl set -dimm 0x2001 FatalMediaError=1
+$ sudo ipmctl set -dimm 0x2001 FatalMediaError=1
 ```
 
 Clear the Fatal Media Error on PMem module 0x20001
 
 ```
-# ipmctl set -dimm 0x2001 FatalMediaError=1 Clear=1 
+$ sudo ipmctl set -dimm 0x2001 FatalMediaError=1 Clear=1 
 ```
 

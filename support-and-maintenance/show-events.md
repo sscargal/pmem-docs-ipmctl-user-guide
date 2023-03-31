@@ -2,8 +2,8 @@
 
 Shows persistent memory module related events. The options, targets, and properties can be used to filter the events. If no filters are provided, the default is to display up to 50 events. Refer to the Event Log Specification for detailed information about events.
 
-```text
-$ ipmctl show [OPTIONS] -event [TARGETS] [PROPERTIES]
+```
+ipmctl show [OPTIONS] -event [TARGETS] [PROPERTIES]
 ```
 
 ## **Targets**
@@ -22,7 +22,7 @@ $ ipmctl show [OPTIONS] -event [TARGETS] [PROPERTIES]
   * `Health`: Filters output to device health events.
   * `Mgmt`: Filters output to management software generated events.
 * `Severity`: Filters output of events based on the severity of the event. One of:
-  * `Info`: \(Default\) Shows informational, warning, and error severity events.
+  * `Info`: (Default) Shows informational, warning, and error severity events.
   * `Warning`: Shows warning and error events.
   * `Error`: Shows error events.
 * `ActionRequired`: Filters output to events that require corrective action or acknowledgment.
@@ -34,14 +34,14 @@ $ ipmctl show [OPTIONS] -event [TARGETS] [PROPERTIES]
 
 Display the 50 most recent events.
 
-```text
-$ ipmctl show -event
+```
+$ sudo ipmctl show -event
 ```
 
 Show the 10 most recent error events. With the exception that this call limits the output to 10, this is equivalent to calling `ipmctl show -error`.
 
-```text
-$ ipmctl show -event count=10 severity=error
+```
+$ sudo ipmctl show -event count=10 severity=error
 ```
 
 ## **Return Data**
@@ -56,4 +56,3 @@ This command displays a table with a row for each event matching the provided fi
   * `1`: An action is required.
 * `Code`: The event code defined by the SW Event Log specification
 * `Message`: The event message
-
